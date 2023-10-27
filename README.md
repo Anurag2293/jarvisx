@@ -21,7 +21,7 @@ $ npm install -g jarvisx
 $ jarvisx COMMAND
 running command...
 $ jarvisx (--version)
-jarvisx/1.0.0 win32-x64 node-v18.17.0
+jarvisx/2.0.0 win32-x64 node-v18.17.0
 $ jarvisx --help [COMMAND]
 USAGE
   $ jarvisx COMMAND
@@ -77,7 +77,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/Anurag2293/jarvisx/blob/v1.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/Anurag2293/jarvisx/blob/v2.0.0/dist/commands/hello/index.ts)_
 
 ## `jarvisx hello world`
 
@@ -95,7 +95,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [dist/commands/hello/world.ts](https://github.com/Anurag2293/jarvisx/blob/v1.0.0/dist/commands/hello/world.ts)_
+_See code: [dist/commands/hello/world.ts](https://github.com/Anurag2293/jarvisx/blob/v2.0.0/dist/commands/hello/world.ts)_
 
 ## `jarvisx help [COMMANDS]`
 
