@@ -66,7 +66,7 @@
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
-  "version": "3.0.0",
+  "version": "4.0.0",
   "bugs": "https://github.com/Anurag2293/jarvisx/issues",
   "keywords": [
     "oclif"
