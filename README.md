@@ -21,7 +21,7 @@ $ npm install -g jarvisx
 $ jarvisx COMMAND
 running command...
 $ jarvisx (--version)
-jarvisx/2.0.0 win32-x64 node-v18.17.0
+jarvisx/3.0.0 win32-x64 node-v18.17.0
 $ jarvisx --help [COMMAND]
 USAGE
   $ jarvisx COMMAND
@@ -42,6 +42,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`jarvisx ai PROMPT`](#jarvisx-ai-prompt)
 * [`jarvisx hello PERSON`](#jarvisx-hello-person)
 * [`jarvisx hello world`](#jarvisx-hello-world)
 * [`jarvisx help [COMMANDS]`](#jarvisx-help-commands)
@@ -54,6 +55,19 @@ USAGE
 * [`jarvisx plugins:uninstall PLUGIN...`](#jarvisx-pluginsuninstall-plugin-1)
 * [`jarvisx plugins:uninstall PLUGIN...`](#jarvisx-pluginsuninstall-plugin-2)
 * [`jarvisx plugins update`](#jarvisx-plugins-update)
+* [`jarvisx prompt PROMPT`](#jarvisx-prompt-prompt)
+
+## `jarvisx ai PROMPT`
+
+```
+USAGE
+  $ jarvisx ai PROMPT
+
+ARGUMENTS
+  PROMPT  Ask AI to do any task
+```
+
+_See code: [dist/commands/ai/index.ts](https://github.com/Anurag2293/jarvisx/blob/v3.0.0/dist/commands/ai/index.ts)_
 
 ## `jarvisx hello PERSON`
 
@@ -77,7 +91,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/Anurag2293/jarvisx/blob/v2.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/Anurag2293/jarvisx/blob/v3.0.0/dist/commands/hello/index.ts)_
 
 ## `jarvisx hello world`
 
@@ -95,7 +109,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [dist/commands/hello/world.ts](https://github.com/Anurag2293/jarvisx/blob/v2.0.0/dist/commands/hello/world.ts)_
+_See code: [dist/commands/hello/world.ts](https://github.com/Anurag2293/jarvisx/blob/v3.0.0/dist/commands/hello/world.ts)_
 
 ## `jarvisx help [COMMANDS]`
 
@@ -362,6 +376,18 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v3.7.0/lib/commands/plugins/update.ts)_
+
+## `jarvisx prompt PROMPT`
+
+```
+USAGE
+  $ jarvisx prompt PROMPT
+
+ARGUMENTS
+  PROMPT  Ask AI to do any task
+```
+
+_See code: [dist/commands/prompt/index.ts](https://github.com/Anurag2293/jarvisx/blob/v3.0.0/dist/commands/prompt/index.ts)_
 <!-- commandsstop -->
 * [`oex hello PERSON`](#oex-hello-person)
 * [`oex hello world`](#oex-hello-world)
