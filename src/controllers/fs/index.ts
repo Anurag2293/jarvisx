@@ -4,7 +4,9 @@ import { createFile, createFolder, deleteFile, deleteFolder, readFile, writeFile
 
 export const main = async (args: { prompt: string }) => {
     try {
-        const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "" });
+        const openai = new OpenAI({ apiKey: "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" });
+
+        // console.log(process.env.OPENAI_API_KEY);
 
         const completion = await openai.chat.completions.create({
             messages: [{
