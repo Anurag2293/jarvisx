@@ -20,6 +20,7 @@ export const main = async (args: { prompt: string }) => {
         })
 
         const command = String(completion.choices[0].message.content);
+        console.log(command);
         exec(command, { shell: 'powershell.exe' }, (err, stdout, stderr) => {
             if (err) {
                 console.log(stderr);
