@@ -15,3 +15,11 @@ export const deleteFile = (fileName: string): void => {
 export const deleteFolder = (folderName: string): void => {
     fs.rmdirSync(folderName);
 }
+
+export const readFile = (fileName: string): string => {
+    return fs.readFileSync(fileName, 'utf8');
+}
+
+export const writeFile = (fileName: string, sentence: string): void => {
+    fs.writeFileSync(fileName, sentence);
+}
