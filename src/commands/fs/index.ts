@@ -1,6 +1,6 @@
 import {Args, Command, Flags} from '@oclif/core';
 import chalk from 'chalk';
-import { main } from '../../controllers/ai/index.js';
+import { main } from '../../controllers/fs/index.js';
 
 export default class FS extends Command {
     static args = {
