@@ -6,7 +6,8 @@
   "dependencies": {
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^3.7.0"
+    "@oclif/plugin-plugins": "^3.7.0",
+    "openai": "^4.14.1"
   },
   "description": "oclif example Hello World CLI (ESM)",
   "devDependencies": {
