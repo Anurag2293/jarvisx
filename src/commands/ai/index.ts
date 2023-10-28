@@ -1,4 +1,5 @@
 import {Args, Command, Flags} from '@oclif/core';
+import chalk from 'chalk';
 import { main } from '../../controllers/ai/index.js';
 
 export default class AI extends Command {
@@ -12,7 +13,11 @@ export default class AI extends Command {
 
     async run(): Promise<void> {
         const {args, flags} = await this.parse(AI);
-        const response = await main(args);
-        this.log(response);
+        const {success, message} = await main(args);
+        if (success) {
+            this.log(chalk.green.bold("SUCCESS: ") + message);
+        } else {
+            this.log(chalk.red.bold("ERROR: ") + message);
+        }
     }
 }
