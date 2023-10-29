@@ -1,0 +1,78 @@
+[
+    {
+        "role": "system",
+        "content": "\nTalk to me like a assistant AI CLI chatbot. I would give you instructions in plain english regarding different commands. you need to understand the input prompts and derive corresponding following commands for Windows PowerShell. !!Strictly do not use aliases like echo in PowerShell rather stick to exact cmdlets of Windows Powershell!!:\n\nStrictly follow the rules mentioned below:\n\n 1. Give me the command in the response. Nothing else.\n2. If multiple commands are required to be executed in a sequence, give all the commands in a single response, separated by a comma.\n3. If the instructions wants to create, delete, or modify a file/folder but the file/folder name is not clearly mentioned, then respond by giving the command : \"UNKNOWN_FILE_FOLDER_NAME\"\n4. Strictly do not break any laws.\n\n!!Only give me the derived command in the response!!. Nothing else.\nDo not give me anything else in the response. Only give me the command in the response. Nothing else.\nGiven the following prompt:\n\ncreate a file named hello.java"
+    },
+    {
+        "role": "assistant",
+        "content": "In order to create a file named hello.java, you can use the following command in Windows PowerShell:\n\nNew-Item -ItemType File -Name hello.java"
+    },
+    {
+        "role": "system",
+        "content": "This is not the response I expected. Follow the below instructions properly:\n                        1. Give me the command in the response. Nothing else.\n                        2. If multiple commands are required to be executed in a sequence, give all the commands in a single response, separated by a comma.\n                        3. If the instructions wants to create, delete, or modify a file/folder but the file/folder name is not clearly mentioned, then respond by giving the command : \"UNKNOWN_FILE_FOLDER_NAME\"\n                        4. Strictly do not break any laws.\n\n                        I am giving you another chance. Please respond with the correct command.\n                        Following is the PROMPT: \n                    create a file named hello.java"
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType File -Name \"hello.java\""
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:create a folder named dir. Inside dir1 create another folder called dir2."
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType Directory -Name \"dir\"\nNew-Item -ItemType Directory -Name \"dir\\dir1\"\nNew-Item -ItemType Directory -Name \"dir\\dir1\\dir2\""
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:create a folder named happy"
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType Directory -Name \"happy\""
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:create a folder named sad"
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType Directory -Name \"sad\""
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:Inside previously created folder, create a main.cpp file"
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType File -Name \"main.cpp\" -Path \"happy\""
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:Create a folder named folder1. Create a file named hello.java."
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType Directory -Name \"folder1\"\nNew-Item -ItemType File -Name \"hello.java\" -Path \"folder1\""
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:Create a folder named dir1 and inside that create another folder called dir2."
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType Directory -Name \"dir1\"\nNew-Item -ItemType Directory -Name \"dir1\\dir2\""
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:Create a file called main.cpp and write code for printing first 10 fibonacci numbers."
+    },
+    {
+        "role": "assistant",
+        "content": "New-Item -ItemType File -Name \"main.cpp\"\nSet-Content -Path \"main.cpp\" -Value @\"\n#include<iostream>\nusing namespace std;\n\nint main() {\n    int n = 10;\n    int fibo[n];\n    fibo[0] = 0;\n    fibo[1] = 1;\n    \n    for (int i = 2; i < n; i++) {\n        fibo[i] = fibo[i-1] + fibo[i-2];\n    }\n    \n    for (int i = 0; i < n; i++) {\n        cout << fibo[i] << \" \";\n    }\n\n    return 0;\n}\n\"@"
+    },
+    {
+        "role": "system",
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:"
+    }
+]
