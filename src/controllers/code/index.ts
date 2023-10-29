@@ -3,7 +3,7 @@ import { exec } from 'child_process';
 
 export const main = async (args: { prompt: string }) => {
     try {
-        const openai = new OpenAI({ apiKey: "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" });
+        const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
         // console.log(process.env.OPENAI_API_KEY);
 

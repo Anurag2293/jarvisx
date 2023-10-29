@@ -31,7 +31,7 @@ export const main = async (args: { prompt: string }) => {
         messages[messages.length - 1].content += args.prompt;
 
         // console.log(messages);
-        const openai = new OpenAI({ apiKey: "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" });
+        const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
         const completion = await openai.chat.completions.create({
             messages: messages,
             model: "gpt-3.5-turbo",
