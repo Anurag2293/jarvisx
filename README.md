@@ -11,9 +11,6 @@ The Smart Command Line Interface for Laymans!
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
 
 # Usage
 <!-- usage -->
@@ -22,19 +19,7 @@ $ npm install -g jarvisx
 $ jarvisx COMMAND
 running command...
 $ jarvisx (--version)
-jarvisx/5.0.0 win32-x64 node-v18.17.0
-$ jarvisx --help [COMMAND]
-USAGE
-  $ jarvisx COMMAND
-...
-```
-<!-- usagestop -->
-```sh-session
-$ npm install -g jarvisx
-$ jarvisx COMMAND
-running command...
-$ jarvisx (--version)
-jarvisx/4.0.0 win32-x64 node-v18.17.0
+jarvisx/5.1.0 win32-x64 node-v18.17.0
 $ jarvisx --help [COMMAND]
 USAGE
   $ jarvisx COMMAND
@@ -69,21 +54,21 @@ ARGUMENTS
   PROMPT  Ask AI to do any compiling or interpreting task
 ```
 
-_See code: [dist/commands/code/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.0.0/dist/commands/code/index.ts)_
+_See code: [dist/commands/code/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.1.0/dist/commands/code/index.ts)_
 
 ## `jarvisx do PROMPT`
 
-describe whatever you want the AI Assistant to do. This command unlike others does not have any restriction on Git, File Systems or Code compilation instructions.
+describe the command here
 
 ```
 USAGE
   $ jarvisx do PROMPT
 
 DESCRIPTION
-  describe the in plain english what you want the assistant to do.
+  describe the command here
 ```
 
-_See code: [dist/commands/do/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.0.0/dist/commands/do/index.ts)_
+_See code: [dist/commands/do/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.1.0/dist/commands/do/index.ts)_
 
 ## `jarvisx fs PROMPT`
 
@@ -95,7 +80,7 @@ ARGUMENTS
   PROMPT  Ask AI to do any task
 ```
 
-_See code: [dist/commands/fs/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.0.0/dist/commands/fs/index.ts)_
+_See code: [dist/commands/fs/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.1.0/dist/commands/fs/index.ts)_
 
 ## `jarvisx hello PERSON`
 
@@ -119,7 +104,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.1.0/dist/commands/hello/index.ts)_
 
 ## `jarvisx hello world`
 
@@ -137,7 +122,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [dist/commands/hello/world.ts](https://github.com/Anurag2293/jarvisx/blob/v5.0.0/dist/commands/hello/world.ts)_
+_See code: [dist/commands/hello/world.ts](https://github.com/Anurag2293/jarvisx/blob/v5.1.0/dist/commands/hello/world.ts)_
 
 ## `jarvisx help [COMMANDS]`
 
