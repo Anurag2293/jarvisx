@@ -73,7 +73,8 @@ export const main = async (args: { prompt: string }) => {
                 console.log(chalk.red.bold("ERROR"), "There was an error executing the commands. Please check the error and respond with the next PROMPT.");
                 const newMessage = {
                     role: "system",
-                    content: `This is not the response I expected. Follow the below instructions properly:
+                    content: `This is not the response I expected. I got following error: ${error.message}.
+                    Follow the below instructions properly:
                         1. Give me the command in the response. Nothing else.
                         2. If multiple commands are required to be executed in a sequence, give all the commands in a single response, separated by a comma.
                         3. If the instructions wants to create, delete, or modify a file/folder but the file/folder name is not clearly mentioned, then respond by giving the command : "UNKNOWN_FILE_FOLDER_NAME"
