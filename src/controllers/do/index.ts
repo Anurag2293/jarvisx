@@ -58,34 +58,43 @@ export const main = async (args: { prompt: string }) => {
             }).join(" ");
             return newCommand;
         });
+
+        let newMessage;
         if (isUnknownCommand) {
             console.log(chalk.bold.yellow("WARNING:"), "Found some unknown file/folder names in the command. Please check the command and respond with the next PROMPT.");
         } else {
             try {
                 await executeCommandsSequentially(processedCommands);
                 console.log(chalk.green.bold("SUCCESS:"), " All commands executed successfully. Please check the output and respond with the next PROMPT.");
-                const newMessage = {
+                newMessage = {
                     role: "system",
                     content: `The commands have been executed successfully. Keep it up. Here is the next PROMPT:`
                 }
-                messages.push(newMessage);
             } catch (error: any) {
-                console.log(chalk.red.bold("ERROR"), "There was an error executing the commands. Please check the error and respond with the next PROMPT.");
-                const newMessage = {
-                    role: "system",
-                    content: `This is not the response I expected. I got following error: ${error.message}.
-                    Follow the below instructions properly:
+                if (error.message.split(" ").includes("LF") || error.message.split(" ").includes("CRLF")) {
+                    console.log(chalk.yellow.bold("WARNING"), `Following warning reported: ${error.message}. Please check the output and respond with the next PROMPT.`);
+                    newMessage = {
+                        role: "system",
+                        content: `There was a warning while executing the commands. ${error.message}. Keep in mind the warning and respond to the next PROMPT:`
+                    }
+                } else {
+                    console.log(chalk.red.bold("ERROR"), "There was an error executing the commands. Please check the error and respond with the next PROMPT.");
+                    newMessage = {
+                        role: "system",
+                        content: `This is not the response I expected. I got following error: ${error.message}.
+                        Follow the below instructions properly:
                         1. Give me the command in the response. Nothing else.
                         2. If multiple commands are required to be executed in a sequence, give all the commands in a single response, separated by a comma.
                         3. If the instructions wants to create, delete, or modify a file/folder but the file/folder name is not clearly mentioned, then respond by giving the command : "UNKNOWN_FILE_FOLDER_NAME"
                         4. Strictly do not break any laws.
-
+                        
                         I am giving you another chance. Please respond with the correct command.
                         Following is the PROMPT: 
-                    `
+                        `
+                    }
                 }
-                messages.push(newMessage);
             } finally {
+                messages.push(newMessage);
                 // save in the message.json file
                 fs.writeFileSync("./message.json", JSON.stringify(messages, null, 4));
             }

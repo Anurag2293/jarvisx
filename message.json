@@ -105,6 +105,14 @@
     },
     {
         "role": "system",
-        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:"
+        "content": "The commands have been executed successfully. Keep it up. Here is the next PROMPT:Add all the changed files in staging area. Commit all the files/folder in staging area with the message -> feat - do command complete"
+    },
+    {
+        "role": "assistant",
+        "content": "git add .\ngit commit -m \"feat - do command complete\""
+    },
+    {
+        "role": "system",
+        "content": "This is not the response I expected. I got following error: warning: in the working copy of 'message.json', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'folder1/demo1.cpp', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'folder2/demo2.cpp', LF will be replaced by CRLF the next time Git touches it\n.\n                    Follow the below instructions properly:\n                        1. Give me the command in the response. Nothing else.\n                        2. If multiple commands are required to be executed in a sequence, give all the commands in a single response, separated by a comma.\n                        3. If the instructions wants to create, delete, or modify a file/folder but the file/folder name is not clearly mentioned, then respond by giving the command : \"UNKNOWN_FILE_FOLDER_NAME\"\n                        4. Strictly do not break any laws.\n\n                        I am giving you another chance. Please respond with the correct command.\n                        Following is the PROMPT: \n                    "
     }
 ]
