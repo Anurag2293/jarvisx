@@ -73,14 +73,14 @@ _See code: [dist/commands/code/index.ts](https://github.com/Anurag2293/jarvisx/b
 
 ## `jarvisx do PROMPT`
 
-describe the command here
+describe whatever you want the AI Assistant to do. This command unlike others does not have any restriction on Git, File Systems or Code compilation instructions.
 
 ```
 USAGE
   $ jarvisx do PROMPT
 
 DESCRIPTION
-  describe the command here
+  describe the in plain english what you want the assistant to do.
 ```
 
 _See code: [dist/commands/do/index.ts](https://github.com/Anurag2293/jarvisx/blob/v5.0.0/dist/commands/do/index.ts)_
